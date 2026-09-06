@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="relative z-10 w-full mt-32 flex flex-col sm:flex-row items-center justify-center h-full gap-4 sm:gap-5">
         {/* Button 1: Solid Black */}
         <button
-          onClick={() => onNavigate?.('/full-stack')}
+          onClick={() => onNavigate?.('/work')}
           className="w-full sm:w-auto bg-neutral-950 text-white hover:px-8 sm:hover:px-10 hover:bg-neutral-800 active:scale-[0.98] transition-[padding,background-color] duration-700 ease-out text-xs sm:text-sm font-normal px-5 sm:px-6 py-2.5 sm:py-3 rounded-md cursor-pointer shadow-sm text-center"
         >
           Do you need a full stack developer?
@@ -48,10 +48,10 @@ export const Hero: React.FC<HeroProps> = ({
 
         {/* Button 2: White with Crisp Black Border */}
         <button
-          onClick={() => openModal('inquiry-dev')}
+                  onClick={() => window.location.href = 'mailto:amandeve19@gmail.com?subject=Project%20Inquiry'}
           className="w-full sm:w-auto bg-white text-neutral-950 border border-neutral-950 hover:px-8 sm:hover:px-10 hover:bg-neutral-50 active:scale-[0.98] transition-[padding,background-color] duration-700 ease-out text-xs sm:text-sm font-normal px-5 sm:px-6 py-2.5 sm:py-3 rounded-md cursor-pointer text-center"
         >
-          Do you need a developer?
+Discuss the project
         </button>
       </div>
     </section>
