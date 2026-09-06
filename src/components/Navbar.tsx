@@ -6,7 +6,7 @@ interface NavbarProps {
   openModal: (modal: ActiveModal) => void;
   onCopyEmail: () => void;
   onNavigate?: (path: string) => void;
-  activeItem?: 'full-stack' | null;
+  activeItem?: 'work' | null;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -31,7 +31,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="w-full px-6 sm:px-10 md:px-14 py-6 sm:py-8  flex items-center justify-between z-30 relative">
       {/* Brand Logo: Aman with interlocking rings */}
       <div 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => {
+          onNavigate?.('/');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         className="group cursor-pointer flex flex-col items-start select-none"
         title="Aman — Full Stack Developer & Designer"
       >
@@ -62,31 +65,18 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Desktop Links */}
         <div className="hidden sm:flex items-center gap-6 sm:gap-8 md:gap-10">
           <button
-            onClick={() => handlePageClick('/full-stack')}
-            className={`transition-colors focus:outline-none cursor-pointer ${activeItem === 'full-stack' ? 'font-bold text-neutral-950' : 'hover:text-black'}`}
+            onClick={() => handlePageClick('/work')}
+            className={`transition-colors focus:outline-none cursor-pointer ${activeItem === 'work' ? 'font-bold text-neutral-950' : 'hover:text-black'}`}
           >
-            Full stack
+            Work.
           </button>
-          <button
-            onClick={() => handleNavClick('design')}
-            className="hover:text-black transition-colors focus:outline-none cursor-pointer"
-          >
-            Design
-          </button>
-          
-          <button
-            onClick={() => handleNavClick('photos')}
-            className="hover:text-black transition-colors focus:outline-none cursor-pointer"
-          >
-            Photos
-          </button>
-          
-          <button
-            onClick={() => handleNavClick('lookbook')}
-            className="hover:text-black transition-colors focus:outline-none cursor-pointer"
-          >
-            Look book
-          </button>
+        
+    <button
+          onClick={() => window.location.href = 'mailto:amandeve19@gmail.com?subject=Project%20Inquiry'}
+          className="w-full sm:w-auto bg-black text-white border border-neutral-950 hover:px-8 sm:hover:px-10 active:scale-[0.98] transition-[padding,background-color] duration-700 ease-out text-xs sm:text-sm font-normal px-5 sm:px-6 py-2.5 sm:py-3 rounded-md cursor-pointer text-center"
+        >
+        hello@aman
+        </button>
         </div>
 
         {/* Contact Email CTA Button */}
@@ -112,8 +102,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       {mobileMenuOpen && (
         <div className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-neutral-200 py-4 px-6 flex flex-col gap-3 shadow-lg z-50">
           <button
-            onClick={() => handlePageClick('/full-stack')}
-            className={`text-left py-2 hover:text-black ${activeItem === 'full-stack' ? 'font-bold text-neutral-950' : 'font-medium text-neutral-800'}`}
+            onClick={() => handlePageClick('/work')}
+            className={`text-left py-2 hover:text-black ${activeItem === 'work' ? 'font-bold text-neutral-950' : 'font-medium text-neutral-800'}`}
           >
             Full stack
           </button>

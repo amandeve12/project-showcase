@@ -53,13 +53,13 @@ export default function App() {
   };
 
   return (
-    path === '/full-stack' ? (
+    path === '/work' ? (
       <div className="min-h-screen w-full bg-[#f2f1ec] text-neutral-950">
         <Navbar
           openModal={setActiveModal}
           onCopyEmail={handleCopyEmail}
           onNavigate={navigate}
-          activeItem="full-stack"
+          activeItem="work"
         />
         <FullStackPage />
       </div>
