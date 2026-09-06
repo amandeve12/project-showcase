@@ -1,0 +1,6 @@
+{
+  "name": "Aman Portfolio",
+  "description": "Portfolio for Aman, a freelance Full Stack Developer based in Paris, featuring an interactive showcase and client highlights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
