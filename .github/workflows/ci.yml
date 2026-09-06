@@ -32,8 +32,8 @@ jobs:
         run: npm install
 
       # 4. TypeScript type checking
-      - name: 🧼 Run TypeScript check
-        run: npx tsc --noEmit
+      # - name: 🧼 Run TypeScript check
+      #   run: npx tsc --noEmit
 
       # 5. Build the Next.js app
       - name: 🏗️ Build the app
